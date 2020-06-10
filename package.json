@@ -6,7 +6,8 @@
   "scripts": {
     "test": "mocha --recursive --exit",
     "start": "node index.js",
-    "build-css": "node-sass --include-path scss views/scss/style.scss views/css/style.css"
+    "build-css": "node-sass --include-path scss views/scss/style.scss views/css/style.css",
+    "nodemon": "nodemon index.js"
   },
   "repository": {
     "type": "git",
