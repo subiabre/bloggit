@@ -38,6 +38,23 @@ class PostsLoader
 
         return posts;
     }
+
+    /**
+     * Load a single post by its id
+     * @param {Number} id Post id
+     * @param {String} dirname The posts folder
+     * @returns {Object} Post object
+     */
+    loadById(id, dirname = './posts')
+    {
+        let posts = this.loadFromFolder(dirname);
+        
+        let post = posts.filter((post) => {
+            return post.metadata.id == id;
+        });
+
+        return post[0] || null;
+    }
 }
 
 module.exports = PostsLoader
