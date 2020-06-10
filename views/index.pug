@@ -1,7 +1,13 @@
 html
     head
-        title= bloggit
+        block head
+            title bloggit
+        style
+            include css/style.css
+        meta(charset='utf8')
+        meta(name='viewport', content='width=device-width, user-scalable=no')
     body
-        ul
+        block content
+            ul
             each post in posts
                 li= post.metadata.title
