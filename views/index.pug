@@ -1,7 +1,7 @@
 html
     head
         block head
-            title= blog.title
+            title= blog.name
         style
             include css/style.css
         meta(charset='utf8')
@@ -9,7 +9,7 @@ html
     body
         block header
             h1(class='header')
-                a(href='/')= blog.title
+                a(href='/')= blog.name
         div(class='wrapper')
             block content
                 ul(class='posts-list')
