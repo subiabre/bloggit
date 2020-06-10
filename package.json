@@ -31,8 +31,8 @@
   },
   "dependencies": {
     "express": "^4.17.1",
-    "markdown-to-pug": "^1.0.11",
     "parse-md": "^2.0.4",
-    "pug": "^3.0.0"
+    "pug": "^3.0.0",
+    "showdown": "^1.9.1"
   }
 }
