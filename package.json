@@ -6,7 +6,7 @@
   "scripts": {
     "test": "mocha --recursive --exit",
     "start": "nodejs index.js",
-    "scss": "node-sass -watch public/scss -o public/css"
+    "build-css": "node-sass --include-path scss views/scss/style.scss views/css/style.css"
   },
   "repository": {
     "type": "git",
