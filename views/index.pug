@@ -1,7 +1,7 @@
 html
     head
         block head
-            title bloggit
+            title= blog.title
         style
             include css/style.css
         meta(charset='utf8')
@@ -9,7 +9,7 @@ html
     body
         block header
             h1(class='header')
-                a(href='/') bloggit
+                a(href='/')= blog.title
         div(class='wrapper')
             block content
                 ul(class='posts-list')
