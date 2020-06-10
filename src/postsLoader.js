@@ -10,10 +10,11 @@ class PostsLoader
 {
     /**
      * Load the posts from the given folder
+     * @param {Boolean} reverse Reverse the array order
      * @param {String} dirname The posts folder
      * @returns {Array}
      */
-    loadFromFolder(dirname = './posts')
+    loadFromFolder(reverse = false, dirname = './posts')
     {
         let posts = new Array;
         let files = fs.readdirSync(dirname, 'utf-8');
@@ -36,6 +37,8 @@ class PostsLoader
             return 0;
         });
 
+        if (reverse) posts.reverse();
+
         return posts;
     }
 
@@ -47,7 +50,7 @@ class PostsLoader
      */
     loadById(id, dirname = './posts')
     {
-        let posts = this.loadFromFolder(dirname);
+        let posts = this.loadFromFolder(false, dirname);
         
         let post = posts.filter((post) => {
             return post.metadata.id == id;
