@@ -1,0 +1,78 @@
+$font-stack: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;
+
+$header: #8260df;
+
+$background-dark: #0d051f;
+$foreground-dark: #fff9e8;
+
+$background-light: #fdfdfd;
+$foreground-light: #2f363d;
+
+@media (prefers-color-scheme: dark) {
+    body {
+        color: $foreground-dark;
+        background-color: $background-dark;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    body {
+        color: $foreground-light;
+        background-color: $background-light;
+    }
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    font: 16px $font-stack;
+}
+
+.header{
+    margin: 0 1em;
+    
+    a{
+        color: $header;
+    }
+}
+
+.wrapper{
+    max-width: 700px;
+    margin: auto;
+
+    a{
+        color: #085fca;
+        text-decoration: none;
+    }
+
+    .posts-list{
+        padding: 0;
+        list-style: none;
+    }
+
+    .post-date{
+        color: #8a8a8a;
+    }
+
+    .post-id{
+        color: #8a8a8a;
+        margin: 0 1em 0 0;
+    }
+    
+    .post-content{
+        p{
+            margin-bottom: 16px;
+            line-height: 1.5;
+            word-wrap: break-word;
+            font-weight: lighter;
+        }
+        
+        code{
+            padding: 0.1em;
+            background-color: #8260dfed;
+            border-radius: 4px;
+        }
+    }
+}
