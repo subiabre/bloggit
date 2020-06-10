@@ -23,4 +23,11 @@ describe('postsLoader', () => {
         assert.exists(post.metadata);
         assert.exists(post.content);
     });
+
+    it('should return null on post not found', async function() {
+        const loader = new PostsLoader;
+        const post = loader.loadById('not an id');
+
+        assert.isNull(post);
+    });
 });
