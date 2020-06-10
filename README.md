@@ -1,5 +1,5 @@
 # bloggit
-Extremely simple **blog**ging, powered by **git**.
+Extremely simple and customizable **blog**ging, powered by **git**.
 
 1. [Installation](#Installation)
 2. [Usage](#Usage)
@@ -7,7 +7,7 @@ Extremely simple **blog**ging, powered by **git**.
 ## Installation
 
 ### Requirements
-- nodejs
+- node
 - npm
 - sass
 
@@ -22,11 +22,19 @@ npm install --save-dev
 ```
 
 ## Usage
-Add posts by creating a new file inside the `posts` folder. Posts will need to be written in Markdown.
+Add posts by creating a new file inside the `posts` folder. Posts will need to be written in Markdown. You'll need to add at least an **id** and **title** meta tags inside your post.
+
+```
+---
+title: Hello world
+id: 1
+date: June 10, 2020
+---
+```
 
 Build the sass files:
 ```console
-npm scss
+npm run scss
 ```
 
 Serve the app:
