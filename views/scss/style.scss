@@ -97,6 +97,7 @@ body {
         }
         
         code{
+            color: $foreground-light;
             padding: 0.1em;
             background: #dfdfdf;
             border-radius: 4px;
@@ -113,6 +114,7 @@ body {
 
         blockquote{
             padding: 0.1 1em;
+            color: $foreground-light;
             background-color: #abd9e8;
             border-left: 0.5em solid #aeabab;
         }
