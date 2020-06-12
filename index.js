@@ -2,7 +2,12 @@ const express = require('express');
 const app = express();
 
 const showdown = require('showdown');
-const converter = new showdown.Converter();
+const converter = new showdown.Converter({
+    strikethrough: true,
+    tables: true,
+    parseImgDimensions: true,
+    emoji: true
+});
 
 const blog = require('./src/blogObject');
 
