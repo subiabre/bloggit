@@ -20,12 +20,12 @@ app.get('/:id', (req, res) => {
     let id = req.params.id;
     let post = loader.loadById(id);
 
-    if (!post) res.render('post', {blog, post: {
+    if (post) post.content = converter.makeHtml(post.content);
+
+    if (!post) post = {
         metadata: {title: '404'},
         content: 'No post found'
-    }});
-
-    if (post) post.content = converter.makeHtml(post.content);
+    };
 
     res.render('post', {blog, post});
 })
