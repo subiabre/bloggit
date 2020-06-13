@@ -25,12 +25,14 @@ app.get('/:id', (req, res) => {
     let id = req.params.id;
     let post = loader.loadById(id);
 
+    // Convert markdown to HTML
     if (post) post.content = converter.makeHtml(post.content);
 
-    if (!post) post = {
-        metadata: {title: '404'},
-        content: 'No post found'
-    };
+    // No post found
+    if (!post) {
+        res.render('404', {blog});
+        return;
+    }
 
     res.render('post', {blog, post});
 })
