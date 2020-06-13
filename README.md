@@ -47,6 +47,30 @@ npm start
 
 You'll be presented with the link to see your blog alive and running.
 
+### Syncing remote source and own blog
+To host your own blog from bloggit you'll have to manage two remotes: the source code from [this repository](https://github.com/subiabre/bloggit.git) and the source code at your own blog repo.
+
+To make it easier to distinguish between the two remotes we'll name the bloggit source as `source` and your actual blog repo as `origin`. After clonning:
+
+Rename the origin as `source`
+```console
+git remote rename origin source
+```
+
+After you have created a new repository in your GitHub or GitLab, add that remote to your local clone as `origin`
+```console
+git remote add origin <url>
+```
+
+Now, when you need to pull to your blog, just `git push origin` and whenever you want to get bloggit updates then:
+```console
+git stash
+git pull
+git stash pop
+```
+
+An **easier** solution would be to just remove this repository from the `origin` at all and only keep your actual blog remote url, but that would not allow you to receive updates on the source code.
+
 ## Customization
 This package itself is a bare bone bloggit application, you can customize and build on top of it very easily.
 
