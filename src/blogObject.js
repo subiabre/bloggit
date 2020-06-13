@@ -10,7 +10,7 @@ class Blog
         /**
          * Display name of the blog
          */
-        this.name = "bloggit";
+        this.name = "I'm not a nerd";
 
         /**
          * Should the posts order be from last to first?
