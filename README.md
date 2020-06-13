@@ -17,9 +17,9 @@ Get the repository:
 git clone https://github.com/subiabre/bloggit.git
 ```
 
-Install all the dependencies:
+Install the dependencies:
 ```console
-npm install --save-dev
+npm install
 ```
 
 ## Usage
