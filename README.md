@@ -65,7 +65,7 @@ git remote add origin <url>
 Now, when you need to pull to your blog, just `git push origin` and whenever you want to get bloggit updates then:
 ```console
 git stash
-git pull
+git pull source
 git stash pop
 ```
 
