@@ -2,7 +2,12 @@ const express = require('express');
 const app = express();
 
 const showdown = require('showdown');
-const converter = new showdown.Converter();
+const converter = new showdown.Converter({
+    strikethrough: true,
+    tables: true,
+    parseImgDimensions: true,
+    emoji: true
+});
 
 const blog = require('./src/blogObject');
 
@@ -20,12 +25,14 @@ app.get('/:id', (req, res) => {
     let id = req.params.id;
     let post = loader.loadById(id);
 
-    if (!post) res.render('post', {blog, post: {
-        metadata: {title: '404'},
-        content: 'No post found'
-    }});
-
+    // Convert markdown to HTML
     if (post) post.content = converter.makeHtml(post.content);
+
+    // No post found
+    if (!post) {
+        res.render('404', {blog});
+        return;
+    }
 
     res.render('post', {blog, post});
 })

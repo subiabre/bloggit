@@ -1,4 +1,5 @@
 $font-stack: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;
+$wrapper-width: 700px;
 
 $header: #8260df;
 
@@ -25,7 +26,7 @@ $foreground-light: #2f363d;
 @media only screen and (min-width: 900px) {
     .header{
         position: fixed;
-        margin: 0;
+        margin: 1em 0 0 1em !important;
         text-align: left;
     }
 }
@@ -39,7 +40,7 @@ body {
 }
 
 .header{
-    margin: 0 1em;
+    margin: 1em 0 0 0;
     text-align: center;
     
     a{
@@ -48,7 +49,7 @@ body {
 }
 
 .wrapper{
-    max-width: 700px;
+    max-width: $wrapper-width;
     padding: 1em;
     margin: auto;
 
@@ -57,10 +58,18 @@ body {
         text-decoration: none;
     }
 
+    a:hover{
+        text-decoration: underline;
+    }
+
     .posts-list{
         padding: 0;
         margin: 0;
         list-style: none;
+
+        li {
+            padding: 1em 0;
+        }
     }
 
     .post-date{
@@ -79,11 +88,39 @@ body {
             word-wrap: break-word;
             font-weight: lighter;
         }
+
+        strong {
+            font-weight: bold;
+        }
+
+        img {
+            max-width: $wrapper-width;
+            display: block;
+            margin: 0 auto;
+            border-radius: 4px;
+        }
         
         code{
+            color: $foreground-light;
             padding: 0.1em;
-            background: #9473f0;
+            background: #dfdfdf;
             border-radius: 4px;
+        }
+
+        pre {
+            code {
+                padding: 0.5em 1em;
+                background: #dfdfdf;
+                border: 1px solid #999;
+                border-radius: 0;
+            }
+        }
+
+        blockquote{
+            padding: 0.1 1em;
+            color: $foreground-light;
+            background-color: #abd9e8;
+            border-left: 0.5em solid #aeabab;
         }
     }
 }

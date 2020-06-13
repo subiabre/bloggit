@@ -1,7 +1,13 @@
 extends index.pug
 
 block head
-    title #{post.metadata.title}
+    title= post.metadata.title
+    
+    // highlight.js
+    link(rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.0/styles/default.min.css")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.0/highlight.min.js")
+    script hljs.initHighlightingOnLoad()
 
 block content
     h1= post.metadata.title
@@ -10,5 +16,5 @@ block content
     div(class='post-content') !{post.content}
 
     hr
-    p End of the post. 
+    p !{blog.footerText} // 
         a(href='#top') Back to top.
