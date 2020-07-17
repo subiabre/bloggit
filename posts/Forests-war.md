@@ -1,5 +1,5 @@
 ---
-title: A bot to track deforestation
+title: A bot to track deforestation.
 date: July 16, 2020
 id: 3
 ---
@@ -8,7 +8,7 @@ About this season 2019 a dear friend started sketching the first versions of a t
 
 The [original](https://gitlab.com/wishiwasrubin/fwbot) bot was a little bit *basic*, sadly, it's creator was suddenly not around anymore to update it, so I decided to rebuild it from the ground up. In loving memory of [@wishiwasrubin](http://gitlab.com/wishiwasrubin)'s Vera.
 
-## Global Forests Watch and GLAD
+## Global Forests Watch and GLAD.
 Data source is the API provided by [GFW](http://globalforestwatch.org). In specific their [GLAD alerts API](http://gfw-api.github.io/swagger-ui/?url=https://raw.githubusercontent.com/gfw-api/gfw-glad-alerts-api/master/app/microservice/swagger.yml#/GLAD).
 
 This "alerts" are each a 30 square meters area that could have been deforestated. You can use their API to retrieve the amount of alerts per country or geozone in an specific period of time. Also, there is an specific endpoint to know the date of the latest issued alert. The API design is good enough in it's intention, but I do have some criticism of the implementation.
@@ -35,7 +35,7 @@ I can give these problems a pass, as they say the API is still in beta (however 
 
 The problems with the glad-alerts API were the main drag and delay for this bot to be finished, but they weren't the only ones.
 
-## About data treatment
+## About data treatment.
 Main goal of this bot was to present actual deforestation data in a way that made it easy to visualize it.
 
 The first sketches of the original bot painted an square of the same area over satellite pictures of some big, known city like New York. I don't know why Vera thought that system was good enough at the time but it didn't take very long for me to realize it was crap (sorry, Vera).
@@ -57,7 +57,7 @@ Behind every challenging part of the data treatment is a reason to it, and overa
 
 It was a priority of the design to make a bot that was as close to accurate as possible.
 
-## What I've learned from this bot?
+## What I have learned from this bot.
 I consider all the challenges here presented as solved now. Current working bot is `2.2.2` and I'd very much like to leave it like that. I suspect further changes will not have to do with code but with deciding an amount of days good enough for tracking. Now a week back for each bot run does not feel like it leaves enough time for the data to settle. Could possibly be updated to 10.
 
 Overcoming these challenges has taught me some things that I, for sure, will remember.
@@ -73,20 +73,5 @@ As a person:
 - Heroku is bliss.
 
 I'm also pretty happy with the result of my mapping solution. It truly was born in a lucid moment and I still have not found anything similar.
-
-Concerning the bot itself, I've learned that deforestation is a problem *not as big as I thought* (opinion with a pinch of salt). Comparisons like "*x* football pitches every minute" made me think we would run out of forests any given day. While we are still deforestating areas that are hard to grasp and our rhythm of destruction is still a very valid thing to worry about, I think we should act more scientific about how deforestation/global warming data is presented to the public.
-
-Data is already there and is factual. We should not try to exaggerate it or present it in ways that are specially alarming or misleading to convince people who do not believe nor want to believe the facts.
-
-> Forests cover 31 percent of the world’s land surface, just over 4 billion hectares. [...] This is down from the pre-industrial area of 5.9 billion hectares.
---Earth Policy Institute
-
-Above statistic is already alarming enough. Worth of a massive extinction.
-
-1. It is not worth to try and argue with poor-minded people as they see an argument as a fight that can either be won or lost, instead as an exchange of ideas and opinions that is of mutual benefit, and they will never accept that they've lost.
-2. It is worth to be truthful about data, as it helps tackling and tracking the real problem. As an example, **deforestation did not decrease** during covid-19 lockdowns. Stating the fact that end-consumers do not motivate the logging industry.
-3. People will manipulate and take whatever interpretation of the data benefits their interests the most.
-
-"But your bot is misleading and alarmist to people of a certain country and you are just a hippie lib who kisses trees!". No. My bot is honest both in it's inner mechanism by being open-sourced, and in it's outer presentation of the data by making maps that are accurate and rely on data gathered from scientifically conducted research and publicly available information.
 
 This bot was made to honour the memory of someone who thought forests were important enough to be enjoyed by future generations. It is an effort to raise awareness about deforestation, and it is an automatism that I hope I'll never see finish it's task.
