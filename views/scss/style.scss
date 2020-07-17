@@ -3,8 +3,8 @@ $wrapper-width: 700px;
 
 $header: #8260df;
 
-$background-dark: #0d051f;
-$foreground-dark: #fff9e8;
+$background-dark: #131820;
+$foreground-dark: #e9e2ce;
 
 $background-light: #fdfdfd;
 $foreground-light: #2f363d;
@@ -54,7 +54,7 @@ body {
     margin: auto;
 
     a{
-        color: #085fca;
+        color: #0e66d1;
         text-decoration: none;
     }
 
@@ -102,9 +102,11 @@ body {
         
         code{
             color: $foreground-light;
-            padding: 0.1em;
-            background: #dfdfdf;
-            border-radius: 4px;
+            padding: .2em .4em;
+            margin: 0;
+            font-size: 85%;
+            background-color: #f3f3f3;
+            border-radius: 6px;
         }
 
         pre {
