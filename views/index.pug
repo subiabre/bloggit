@@ -19,3 +19,6 @@ html
                             a(href=post.metadata.id)= post.metadata.title
                             br
                             span(class='post-date')= post.metadata.date
+            hr    
+            block footer
+                p !{blog.footerText}
