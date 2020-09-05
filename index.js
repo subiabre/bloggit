@@ -15,6 +15,8 @@ const postsLoader = require('./src/postsLoader');
 const loader = new postsLoader;
 const postsList = loader.loadFromFolder(blog.order);
 
+app.use(express.static(__dirname + '/public'));
+
 app.set('view engine', 'pug');
 
 app.get('/', (req, res) => {
