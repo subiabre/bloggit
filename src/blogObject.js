@@ -1,5 +1,7 @@
 "use strict";
 
+const Lastfm = require("./lastfm");
+
 /**
  * Contains the blog info
  */
@@ -20,7 +22,12 @@ class Blog
         /**
          * Text at blog foot
          */
-        this.footerText = `2020 &copy; ${this.name}`
+        this.footerText = `2020 &copy; ${this.name}`;
+
+        /**
+         * Last song I heard by last.fm
+         */
+        this.fm = new Lastfm;
     }
 }
 
