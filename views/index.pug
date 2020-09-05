@@ -21,4 +21,7 @@ html
                             span(class='post-date')= post.metadata.date
             hr    
             block footer
-                p !{blog.footerText}
+                p 
+                    span !{blog.footerText} // 
+                    a(href="http://github.com/subiabre/blog") GitHub
+                    
