@@ -5,10 +5,13 @@ const chai = require('chai');
 const assert = chai.assert;
 
 describe('lastfm', () => {
-    it('should retrieve last song from last.fm', async function() {
-        const last = new Lastfm;
-        const song = await last.getLatestTrack();
+    it('should have user and api key', async function() {
+        const fm = new Lastfm;
 
-        assert.isObject(song);
+        assert.isObject(fm);
+        assert.isString(fm.apiKey);
+        assert.equal(fm.apiPath, 'http://ws.audioscrobbler.com/2.0/');
+        assert.equal(fm.apiFormat, '&format=json');
+        assert.equal(fm.username, 'f7701');
     });
 });
